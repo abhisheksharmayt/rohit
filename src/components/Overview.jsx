@@ -6,7 +6,7 @@ import CRM_Tickets_Form from './CRM_Tickets_Form'
 const Overview = () => {
     const [showForm, setShowFrom] = useState(false);
     return (
-        <div className='mx-auto mt-16 w-[300px] border-gray-300 border-[1px] p-5 rounded-lg text-gray-600'>
+        <div className='ml-auto w-[300px] border-gray-300 border-[1px] p-5 rounded-lg text-gray-600'>
             {
                 (showForm) ? (
                     <div className='flex items-center'>
@@ -25,7 +25,7 @@ const Overview = () => {
                     </div>
                 )
             }
-            {showForm && <CRM_Tickets_Form/>}
+            {showForm && <CRM_Tickets_Form setShowForm = {setShowFrom} />}
             {showForm || <p className='text-sm mt-2'>No tickets found.</p>}
         </div>
     )
